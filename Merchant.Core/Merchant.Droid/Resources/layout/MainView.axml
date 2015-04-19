@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:actionBarNavMode="list">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout1">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout2"
+                    android:layout_marginRight="0.0dp">
+                    <TextView
+                        android:text="Large Text"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/textView1"
+                        local:MvxBind="Click TransCommand;Text TotalSalesToday" />
+                    <TextView
+                        android:text="Medium Text"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:id="@+id/button2"
+                        local:MvxBind="Click Promo1Command;Text Promo1Title" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:id="@+id/button3"
+                        local:MvxBind="Click Promo2Command;Text Promo2Title" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:id="@+id/button4"
+                        local:MvxBind="Click Promo3Command;Text Promo3Title" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout3"
+                    android:scrollbars="horizontal">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:id="@+id/linearLayout5"
+                        android:layout_marginRight="0.0dp"
+                        android:layout_marginBottom="0.0dp">
+                        <TextView
+                            android:text="RM  "
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                        <TextView
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textViewAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="0.0dp"
+                            local:MvxBind="Text Amount" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:id="@+id/linearLayout4">
+                        <Button
+                            android:text="1"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum1"
+                            android:layout_marginRight="0.0dp"
+                            local:MvxBind="Click Button1Command" />
+                        <Button
+                            android:text="2"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum2"
+                            local:MvxBind="Click Button2Command" />
+                        <Button
+                            android:text="3"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum3"
+                            local:MvxBind="Click Button3Command" />
+                        <Button
+                            android:text="4"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum4"
+                            local:MvxBind="Click Button4Command" />
+                        <Button
+                            android:text="5"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum5"
+                            local:MvxBind="Click Button5Command" />
+                        <Button
+                            android:text="CLR"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNumClear"
+                            local:MvxBind="Click ButtonCLRCommand" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:id="@+id/linearLayout4">
+                        <Button
+                            android:text="6"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum6"
+                            local:MvxBind="Click Button6Command" />
+                        <Button
+                            android:text="7"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum7"
+                            local:MvxBind="Click Button7Command" />
+                        <Button
+                            android:text="8"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum8"
+                            local:MvxBind="Click Button8Command" />
+                        <Button
+                            android:text="9"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum9"
+                            local:MvxBind="Click Button9Command" />
+                        <Button
+                            android:text="0"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNum0"
+                            local:MvxBind="Click Button0Command" />
+                        <Button
+                            android:text="DEL"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/buttonNumDel"
+                            local:MvxBind="Click ButtonDELCommand" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="900dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/linearLayout6">
+                        <TextView
+                            android:text="Merchant Name : "
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            local:MvxBind="Text QrMerchantName" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="900dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/linearLayout6">
+                        <TextView
+                            android:text="Promo Type : "
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            local:MvxBind="Text QrPromoType" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="900dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/linearLayout6">
+                        <TextView
+                            android:text="Promo Title : "
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            local:MvxBind="Text QrPromoTitle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearLayout6">
+                        <Button
+                            android:text="SCAN"
+                            android:id="@+id/button10"
+                            android:layout_width="450dp"
+                            android:layout_height="150dp"
+                            local:MvxBind="Click Scan" />
+                        <Button
+                            android:text="SAVE"
+                            android:id="@+id/button10"
+                            android:layout_width="450dp"
+                            android:layout_height="150dp"
+                            local:MvxBind="Click SaveCommand" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>
