@@ -1,10 +1,11 @@
 using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Cirrious.MvvmCross.Droid.Views;
 
 namespace Merchant.Droid.Views
 {
-    [Activity(Label= "Promotion")]
+    [Activity(Label = "Merchant", ScreenOrientation = ScreenOrientation.Landscape)]
     public class PromotionView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)

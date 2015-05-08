@@ -16,12 +16,14 @@ namespace Merchant.Core.Services
         #endregion
 
         #region Transaction
+        Transaction GetPreviousTransaction();
         List<Transaction> GetAllTransaction();
         void InsertTransaction(Transaction trans);
         void Update(Transaction trans);
         void Delete(Transaction trans);
         int Count { get; }
         #endregion
+
 
     }
 }

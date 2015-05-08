@@ -45,10 +45,8 @@
     <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\ICalculationAmountService.cs" />
     <Compile Include="Services\IDataService.cs" />
-    <Compile Include="Services\ITransactionService.cs" />
     <Compile Include="Services\Promotion.cs" />
     <Compile Include="Services\Transaction.cs" />
-    <Compile Include="Services\TransactionService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

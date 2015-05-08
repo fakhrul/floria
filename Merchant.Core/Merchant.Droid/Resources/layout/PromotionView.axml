@@ -4,66 +4,128 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <TextView
-        android:text="Title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <EditText
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Title" />
-    <TextView
-        android:text="Type"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text PromotionType" />
-    <TextView
-        android:text="Begin Date"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text BeginDate" />
-    <TextView
-        android:text="End Date"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text EndDate" />
-    <Button
-        android:text="Save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        local:MvxBind="Click SaveCommand" />
-    <Button
-        android:text="Cancel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        local:MvxBind="Click CancelCommand" />
-    <Button
-        android:text="Clear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        local:MvxBind="Click ClearCommand" />
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayoutMain">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout1">
+                    <TextView
+                        android:text="Title"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="40dp"
+                        android:width="200dp" />
+                    <EditText
+                        android:textSize="40dp"
+                        local:MvxBind="Text Title"
+                        android:layout_width="700.0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/editText1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout2">
+                    <TextView
+                        android:text="Type"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="40dp"
+                        android:width="200dp" />
+                    <EditText
+                        android:textSize="40dp"
+                        local:MvxBind="Text PromotionType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/editText2" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout3">
+                    <TextView
+                        android:text="Begin Date"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="40dp"
+                        android:width="200dp" />
+                    <EditText
+                        android:textSize="40dp"
+                        local:MvxBind="Text BeginDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/editText3" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout4">
+                    <TextView
+                        android:text="End Date"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="40dp"
+                        android:width="200dp" />
+                    <EditText
+                        android:textSize="40dp"
+                        local:MvxBind="Text EndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/editText4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout5">
+                    <Button
+                        android:text="Save"
+                        android:id="@+id/button1"
+                        local:MvxBind="Click SaveCommand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="40dp"
+                        android:width="150dp" />
+                    <Button
+                        android:text="Cancel"
+                        android:id="@+id/button1"
+                        local:MvxBind="Click CancelCommand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="40dp"
+                        android:width="150dp" />
+                    <Button
+                        android:text="Clear"
+                        android:id="@+id/button1"
+                        local:MvxBind="Click ClearCommand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="40dp"
+                        android:width="150dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
 </LinearLayout>

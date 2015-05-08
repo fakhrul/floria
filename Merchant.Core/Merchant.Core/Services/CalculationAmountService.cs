@@ -30,7 +30,7 @@ namespace Merchant.Core.Services
                 case "7":
                 case "8":
                 case "9":
-                    if (amount.Length <= 6)
+                    if (amount.Length <= 10)
                         amount = amount + inValue;
                     break;
                 default:

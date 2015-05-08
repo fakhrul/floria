@@ -10,16 +10,18 @@ namespace Merchant.Core.ViewModels
 {
     public class TransactionViewModel : MvxViewModel
     {
-        public TransactionViewModel(ITransactionService service)
+        private readonly IDataService _dataService;
+        public TransactionViewModel(IDataService service)
         {
-            var trxList = new List<Transaction>();
-            for (var i = 0; i < 100; i++)
-            {
-                var newTrx = service.CreateNewTransaction(i.ToString(),  i.ToString(), i);
-                trxList.Add(newTrx);
-            }
-
-            Transactions = trxList;
+            _dataService = service;
+            //var trxList = new List<Transaction>();
+            //for (var i = 0; i < 100; i++)
+            //{
+            //    var newTrx = service.CreateNewTransaction(i.ToString(),  i.ToString(), i);
+            //    trxList.Add(newTrx);
+            //}
+            //_dataService.G(1).Title;
+            Transactions = _dataService.GetAllTransaction();
         }
 
         private List<Transaction> _transactions;

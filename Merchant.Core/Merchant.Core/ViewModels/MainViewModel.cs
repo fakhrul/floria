@@ -39,6 +39,8 @@ namespace Merchant.Core.ViewModels
         private MvxCommand _buttonCLRCommand;
         private MvxCommand _buttonDELCommand;
         private MvxCommand _saveCommand;
+        private string _prevPromoTitle;
+        private string _prevAmount;
 
         private readonly IBarCodeService _barCodeService;
         private readonly IUserDialogService _userDialogService;
@@ -58,6 +60,27 @@ namespace Merchant.Core.ViewModels
             SynchronizePromotion();
             RefreshPromotion();
 
+            InitializeVariables();
+            Recalc();
+            RefreshPreviousTrans();
+
+        }
+
+        private void RefreshPreviousTrans()
+        {
+            Transaction trans = _dataService.GetPreviousTransaction();
+
+            if (trans == null)
+                return;
+
+            if (!string.IsNullOrEmpty(trans.PromoId))
+                PrevPromoTitle = trans.PromoId;
+            decimal ringgit = (decimal)trans.Amount / 100m;
+            PrevAmount = "RM " + ringgit.ToString("0.00");
+        }
+
+        private void InitializeVariables()
+        {
             var list = Enum.GetNames(typeof(BarCodeFormat)).ToList();
             list.Insert(0, "Any");
             this.Formats = list;
@@ -66,8 +89,8 @@ namespace Merchant.Core.ViewModels
             _inputValue = "0";
             _amountInCents = "0";
             _amount = "0";
-            Recalc();
-
+            PrevAmount = "";
+            PrevPromoTitle = "";
         }
 
         /// <summary>
@@ -111,6 +134,26 @@ namespace Merchant.Core.ViewModels
             QrPromoType = split[2];
             QrPromoTitle = split[3];
 
+        }
+
+        public string PrevPromoTitle
+        {
+            get { return _prevPromoTitle; }
+            set
+            {
+                _prevPromoTitle = value;
+                RaisePropertyChanged(() => PrevPromoTitle);
+            }
+        }
+
+        public string PrevAmount
+        {
+            get { return _prevAmount; }
+            set
+            {
+                _prevAmount = value;
+                RaisePropertyChanged(() => PrevAmount);
+            }
         }
 
         private string _qrPromoTitle;
@@ -207,12 +250,10 @@ namespace Merchant.Core.ViewModels
 
         public IMvxCommand Scan
         {
-            //Temp bypass
-
             get
             {
-                return new MvxCommand(() => ShowViewModel<MainViewModel>(new { qrCode = @"http://www.test.com;Kedai Bunga;FREE GIFT;Buy 1 Free 1" }));
-
+                //QR Code Format @"http://www.test.com;Kedai Bunga;FREE GIFT;Buy 1 Free 1"
+                //return new MvxCommand(() => ShowViewModel<MainViewModel>(new { qrCode = @"http://www.test.com;Kedai Bunga;FREE GIFT;Buy 1 Free 1" }));
 
                 return new MvxCommand(async () =>
                 {

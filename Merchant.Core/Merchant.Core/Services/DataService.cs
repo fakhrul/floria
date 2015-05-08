@@ -33,6 +33,10 @@ namespace Merchant.Core.Services
             _connection.Update(promo);
         }
 
+        public Transaction GetPreviousTransaction()
+        {
+            return _connection.Table<Transaction>().OrderByDescending(c => c.DateTime).FirstOrDefault();
+        }
 
         public List<Transaction> GetAllTransaction()
         {

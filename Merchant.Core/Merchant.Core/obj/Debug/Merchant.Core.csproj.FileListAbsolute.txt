@@ -1,0 +1,11 @@
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Merchant.Core.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Merchant.Core.pdb
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Acr.MvvmCross.Plugins.BarCodeScanner.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Acr.MvvmCross.Plugins.UserDialogs.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Cirrious.CrossCore.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Cirrious.MvvmCross.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Cirrious.MvvmCross.Localization.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\bin\Debug\Cirrious.MvvmCross.Plugins.Sqlite.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\obj\Debug\Merchant.Core.csprojResolveAssemblyReference.cache
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\obj\Debug\Merchant.Core.dll
+D:\Programming\AMIR\Merchant.Core\Floria\Merchant.Core\Merchant.Core\obj\Debug\Merchant.Core.pdb
